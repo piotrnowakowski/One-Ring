@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    font-family: BroshK;
+    background: transparent linear-gradient(180deg, #E40000 0%, #170103 96%, #580C10 100%, #3D171A 100%, #000000 100%) 0% 0% no-repeat padding-box;
+    letter-spacing: 1.8px;
+    color: #FFFFFF;
+    opacity: 1;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: flex-end;
+}
+
+.logo{
+    align-self: center;
+    margin: 2vw;
+
+}
+
+.login-container{
+    width: 60%;
+    height: 50%;
+    align-self: center;
+    margin: 2vw;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 6px 6px #00000039;
+    mix-blend-mode: darken;
+    border: 1px solid #707070;
+    opacity: 0.55;
+}
+
+button{
+    background: #000000 0% 0% no-repeat padding-box;
+    border: 2px solid #BCE0FD;
+    border-radius: 10px;
+    opacity: 1;
+
+    text-align: center;
+    font-family: BroshK;
+    font-size: 1.5vw;
+    letter-spacing: 3px;
+    color: #FFFFFF;
+    margin: 1vw;
+    height: 2vw;
+    width: 10vw;
+}
+
+input{    
+    color: #FFFFFF;
+    background: #000000 0% 0% no-repeat padding-box;
+    border: 2px solid #BCE0FD;
+    border-radius: 20px;
+    margin-top: 0.8vw;
+
+    font-family: BroshK;
+    text-align: left;
+    letter-spacing: 1.8px;
+    font-size: 2vw;
+
+    opacity: 1;
+    width: 30vw;
+    height: 2vw;
+}
+
+.bottom-line{
+    background-color: black;
+    height: 5vw;
+    font-weight: bold;
+    text-align: center;
+}
