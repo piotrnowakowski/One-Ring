@@ -1,0 +1,55 @@
+.registration-container{
+    grid-row: 2/30;
+    grid-column: 22/40;
+    align-self: center;
+    margin: 2vw;
+}
+.platform-form-container{
+    grid-row: 15/16;
+    grid-column: 1/23;
+    align-self: center;
+    margin: 2vw;
+}
+input{    
+    color: #FFFFFF;
+    background: #000000 0% 0% no-repeat padding-box;
+    border: 2px solid #BCE0FD;
+    border-radius: 20px;
+    margin-top: 0.8vw;
+
+    font-family: BroshK;
+    text-align: center;
+    letter-spacing: 1.8px;
+    font-size: 2vw;
+
+    opacity: 1;
+    width: 30vw;
+    height: 2vw;
+}
+label{
+    color: #FFFFFF;
+    background: #000000 0% 0% no-repeat padding-box;
+    border: 2px solid #BCE0FD;
+    border-radius: 20px;
+    margin-top: 0.8vw;
+
+    font-family: BroshK;
+    text-align: center;
+    letter-spacing: 1.8px;
+    font-size: 2vw;
+
+    opacity: 1;
+    width: 30vw;
+    height: 2vw;
+}
+form2{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 6px 6px #00000039;
+    mix-blend-mode: darken;
+
+}

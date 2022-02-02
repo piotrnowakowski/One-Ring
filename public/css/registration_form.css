@@ -1,0 +1,15 @@
+.registration-container{
+    grid-row: 21/26;
+    grid-column: 11/29;
+    align-self: center;
+    margin: 2vw;
+}
+.logo{
+    align-self: center;
+    max-height: 50%;
+    max-width: 50%;
+    width: auto;
+    height: auto;
+    grid-column: 16/30;
+    grid-row: 6/5;
+}

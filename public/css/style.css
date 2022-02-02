@@ -1,14 +1,17 @@
 body{
     margin: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 .container{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(40, 2.5%);
+    grid-template-columns: repeat(40, 2.5%);
     width: 100vw;
     height: 100vh;
     font-family: BroshK;
-    background: transparent linear-gradient(180deg, #E40000 0%, #170103 96%, #580C10 100%, #3D171A 100%, #000000 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #E40000 0%, #170103 99%, #580C10 100%, #3D171A 100%, #000000 100%) 0% 0% no-repeat padding-box;
     letter-spacing: 1.8px;
     color: #FFFFFF;
     opacity: 1;
@@ -19,17 +22,28 @@ body{
 
 .logo{
     align-self: center;
-    margin: 2vw;
-
+    max-height: 50%;
+    max-width: 50%;
+    width: auto;
+    height: auto;
+    grid-column: 15/27;
+    grid-row: 18/5;
 }
 
 .login-container{
-    width: 60%;
-    height: 50%;
+    grid-row: 23/24;
+    grid-column: 11/29;
     align-self: center;
     margin: 2vw;
 }
-
+img {
+    display: block;
+    object-fit: scale-down;
+    max-width: 100%;
+    flex: 1;
+    min-height: 0;
+    margin: 0.2vw;
+  }
 form{
     display:flex;
     flex-direction: column;
@@ -39,8 +53,7 @@ form{
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 6px 6px #00000039;
     mix-blend-mode: darken;
-    border: 1px solid #707070;
-    opacity: 0.55;
+
 }
 
 button{
@@ -58,7 +71,12 @@ button{
     height: 2vw;
     width: 10vw;
 }
-
+.writing{
+    font-family: BroshK;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
 input{    
     color: #FFFFFF;
     background: #000000 0% 0% no-repeat padding-box;
@@ -67,7 +85,7 @@ input{
     margin-top: 0.8vw;
 
     font-family: BroshK;
-    text-align: left;
+    text-align: center;
     letter-spacing: 1.8px;
     font-size: 2vw;
 
@@ -77,8 +95,17 @@ input{
 }
 
 .bottom-line{
+    grid-row: 40/41;
+    grid-column: 1/41;
     background-color: black;
-    height: 5vw;
     font-weight: bold;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.pictures
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
