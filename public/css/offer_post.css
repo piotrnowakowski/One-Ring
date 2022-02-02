@@ -10,22 +10,6 @@
     align-self: center;
     margin: 2vw;
 }
-input{    
-    color: #FFFFFF;
-    background: #000000 0% 0% no-repeat padding-box;
-    border: 2px solid #BCE0FD;
-    border-radius: 20px;
-    margin-top: 0.8vw;
-
-    font-family: BroshK;
-    text-align: center;
-    letter-spacing: 1.8px;
-    font-size: 2vw;
-
-    opacity: 1;
-    width: 30vw;
-    height: 2vw;
-}
 label{
     color: #FFFFFF;
     background: #000000 0% 0% no-repeat padding-box;
@@ -53,3 +37,9 @@ form2{
     mix-blend-mode: darken;
 
 }
+input[type="time"]::-webkit-calendar-picker-indicator{
+    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
+    background-color:blue;
+
+  }
+
