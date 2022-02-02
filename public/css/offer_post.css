@@ -40,6 +40,8 @@ form2{
 input[type="time"]::-webkit-calendar-picker-indicator{
     filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
     background-color:blue;
-
   }
-
+  input[type="date"]::-webkit-calendar-picker-indicator{
+    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
+    background-color:blue;
+  }

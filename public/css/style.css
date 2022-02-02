@@ -26,8 +26,8 @@ body{
     max-width: 50%;
     width: auto;
     height: auto;
-    grid-column: 15/27;
-    grid-row: 18/5;
+    grid-column: 16/30;
+    grid-row: 6/5;
 }
 
 .login-container{
