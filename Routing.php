@@ -21,7 +21,7 @@ class Routing{
         #TODO call controller method 
         $controller = self::$routes[$action];
         $object = new $controller;
-
+        $action = $action ?: 'index';
         $object->$action();
 
     }

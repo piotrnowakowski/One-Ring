@@ -1,7 +1,7 @@
 <?php
 require_once 'AppController.php';
 class DefaultController extends AppController{
-    public function index()
+    public function login()
     {
         #TODO display login.html;
         $this->render('login');
@@ -13,14 +13,14 @@ class DefaultController extends AppController{
     }
     public function offer_post()
     {
-
+        $this->render('offer_post');
     }
     public function registration_form()
     {
-
+        $this->render('registration_form');
     }
     public function reservation()
     {
-
+        $this->render('reservation');
     }
 }
