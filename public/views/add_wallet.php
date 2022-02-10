@@ -12,7 +12,7 @@
         <img style="width: 100%;max-height: 100%" src="public/img/logo.svg">
     </div>
     <div class="registration-container">
-        <form action="add_wallet" method="POST" enctype="multipart/form-data">
+        <header>
             <div class="messages" >
                 <?php if(isset($messages))
                 {
@@ -21,6 +21,8 @@
                 }
                 ?>
             </div>
+        </header>
+        <form action="add_wallet" method="POST" enctype="multipart/form-data">
             <textarea name="mnemonic_phrase" rows="4" type="text" placeholder=" Enter mnemonic phrase"></textarea>
             <input name="private-key" type="text" placeholder=" Enter private key">
             <input type="file" name="json_file" placeholder=" Upload JSON file">
