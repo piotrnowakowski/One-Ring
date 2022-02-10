@@ -1,0 +1,28 @@
+textarea{
+    color: #FFFFFF;
+    background: #000000 0% 0% no-repeat padding-box;
+    border: 2px solid #BCE0FD;
+    border-radius: 20px;
+    margin-top: 0.8vw;
+
+    font-family: BroshK, serif;
+    text-align: center;
+    letter-spacing: 1.8px;
+    font-size: 2vw;
+
+    opacity: 1;
+    width: 30vw;
+    height: 6vw;
+}
+input[type="file"]{
+    font-family: BroshK, serif;
+    font-size: 1.5vw;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.registration-container {
+    grid-row: 19/26;
+    grid-column: 9/31;
+    align-self: center;
+    margin: 2vw;
+}
