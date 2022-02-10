@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/registration_form.css">
     <link rel="stylesheet" type="text/css" href="public/css/add_wallet.css">
 
-    <title>registration</title>
+    <title>Add Wallet</title>
 </head>
 <body>
 <div class="container">
@@ -25,7 +25,7 @@
         <form action="add_wallet" method="POST" enctype="multipart/form-data">
             <textarea name="mnemonic_phrase" rows="4" type="text" placeholder=" Enter mnemonic phrase"></textarea>
             <input name="private-key" type="text" placeholder=" Enter private key">
-            <input type="file" name="json_file" placeholder=" Upload JSON file">
+            <input name="json_file" type="file" placeholder=" Upload JSON file">
             <button name="add_wallet_button" type="submit">Add wallet</button>
         </form>
     </div>

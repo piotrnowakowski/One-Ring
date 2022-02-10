@@ -1,0 +1,39 @@
+p{
+    font-family: BroshK, serif;
+    text-align: center;
+    color: #000;
+    opacity: 1;
+    letter-spacing: 1.8px;
+    font-size: 2vw;
+}
+h1{
+    font-family: BroshK, serif;
+    text-align: center;
+    color: #000;
+    opacity: 1;
+    letter-spacing: 1.8px;
+    font-size: 2.5vw;
+}
+.wallet-container{
+    grid-row: 8/26;
+    grid-column: 21/42;
+    align-self: center;
+    margin: 2vw;
+    text-align: center;
+}
+.registration-container{
+    grid-row: 10/23;
+    grid-column: 2/21;
+    align-self: center;
+    margin: 2vw;
+    text-align: center;
+}
+.logo{
+    align-self: center;
+    max-height: 50%;
+    max-width: 50%;
+    width: auto;
+    height: auto;
+    grid-column: 17/30;
+    grid-row: 3/5;
+}

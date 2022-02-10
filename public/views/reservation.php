@@ -40,35 +40,6 @@
                     <a href="https://www.Netflix.com/">Website</a>
                 </div>
             </div>
-            <div id="buy-4">
-                    <div class = "lista-informacji">
-                        <h1>Netflix</h1>
-                        <p>Login <br> pites </p>
-                        <p>Password</p>
-                        <p>Start time</p>
-                        <p>End time</p>
-                        <a href="https://www.Netflix.com/">Website</a>
-                    </div>
-            </div>
-            <div id="buy-5">
-                <div class = "lista-informacji">
-                    <h1>Netflix</h1>
-                    <p>Login <br> pites </p>
-                    <p>Password<br>a </p>
-                    <p>Start time<br> a</p>
-                    <p>End time<br> a</p>
-                    <a href="https://www.Netflix.com/">Website</a>
-                </div>
-            </div>
-            <div id="buy-6">
-                <div class = "lista-informacji">
-                    <h1>Netflix</h1>
-                    <p>Login <br> pites </p>
-                    <p>Password<br>a </p>
-                    <p>Start time<br> a</p>
-                    <p>End time<br> a</p>
-                    <a href="https://www.Netflix.com/">Website</a>
-                </div>
         </section>
         
         <div class="bottom-line">

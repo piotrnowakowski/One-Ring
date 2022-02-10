@@ -1,5 +1,6 @@
 <?php
 require_once 'AppController.php';
+require_once __DIR__ .'/../models/Wallet.php';
 
 class WalletController extends AppController
 {
@@ -17,9 +18,11 @@ class WalletController extends AppController
                 $_FILES['json_file']['tmp_name'],
                 dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['json_file']['name']
             );
+            $wallet = new Wallet($_POST['mnemonic_phrase'], $_POST['private-key'], $_FILES['json_file']['name']);
+            # TODO add this to a new view with user details
+            return $this->render('user_details', ['messages' => $this->message, 'wallet' => $wallet]);
         }
-
-        $this->render('add_wallet',['messages' => $this->message]);
+        return $this->render('add_wallet',['messages' => $this->message]);
     }
 
     private function validate(array $file): bool

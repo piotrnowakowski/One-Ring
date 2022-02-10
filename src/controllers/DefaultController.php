@@ -6,6 +6,11 @@ class DefaultController extends AppController{
         #TODO display login.html;
         $this->render('login');
     }
+    public function index()
+    {
+        #TODO display login.html;
+        $this->render('login');
+    }
     public function marketplace()
     {
         #TODO display marketplace

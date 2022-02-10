@@ -10,14 +10,16 @@
         </div>
         <div class="login-container">
             <form class="loginform" action="login" method="POST">
-                <div class="messages" >
-                    <?php if(isset($messages))
-                        {
-                            foreach($messages as $message)
-                            echo $message;
-                        }
-                        ?>
-                </div>
+                <header>
+                    <div class="messages">
+                        <?php if(isset($messages))
+                            {
+                                foreach($messages as $message)
+                                echo $message;
+                            }
+                            ?>
+                    </div>
+                </header>
                 <input name="email" type="text" placeholder=" email@email.com">
                 <input name="password" type="password" placeholder=" password">
                 <button type="submit">LOGIN</button>
