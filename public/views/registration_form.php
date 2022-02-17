@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <link rel="stylesheet" type="text/css" href="public/css/registration_form.css">
+    <link rel="stylesheet" type="text/css" href="public/css/registration_form.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css?v=<?php echo time(); ?>">
+
 
     <title>registration</title>
 </head>
 <body>
     <div class="container">
-        <div class="logo">
+        <div class="logo-reg">
             <img style="width: 100%;max-height: 100%" src="public/img/logo.svg">
         </div>
         <div class="registration-container">
-            <form>
+            <header>
+                <div class="messages" >
+                    <?php if(isset($messages))
+                    {
+                        foreach($messages as $message)
+                            echo $message;
+                    }
+                    ?>
+                </div>
+            </header>
+            <form action="registration_form" method="POST" enctype="multipart/form-data">
                 <input name="email" type="text" placeholder=" email@email.com">
-                <input name="name" type="text" placeholder=" name surname">
+                <input name="name" type="text" placeholder=" name">
+                <input name="surname" type="text" placeholder=" surname">
                 <input name="nick" type="text" placeholder=" nick">
                 <input name="password" type="password" placeholder=" password">
-                <button>Register</button>
+                <button name="add_user_button" type="submit">Register</button>
             </form>
         </div>
         <div class="bottom-line">

@@ -9,16 +9,32 @@
     </div>
     <div class="registration-container">
         <h1>User info</h1>
+        <?php if($user) : ?>
+            <p>email<br><?= $user->getEmail();?></p>
+            <p>password<br><?= $user->getPassword();?></p>
+            <p>name<br><?= $user->getName();?></p>
+            <p>surname<br><?= $user->getSurname();?></p>
+            <p>nick<br><?= $user->getNick();?></p>
+        <?php else: ?>
             <p>email<br></p>
             <p>password<br></p>
             <p>name<br></p>
             <p>surname<br></p>
+            <p>nick<br></p>
+        <?php endif; ?>
     </div>
     <div class="wallet-container">
         <h1>Wallet informations</h1>
-            <p>Menmonic phrase<br><?= $wallet->getMnemonicPhrase()?></p>
+        <?php if($wallet) : ?>
+            <p>Mnemonic phrase<br><?=$wallet->getMnemonicPhrase();?></p>
             <p>Private Key<br><?= $wallet->getPrivateKey() ?></p>
             <p>Json File<br><?= $wallet->getWalletJsonName() ?></p>
+
+        <?php else: ?>
+            <p>Mnemonic phrase<br>None</p>
+            <p>Private Key<br>None</p>
+            <p>Json File<br>None</p>
+        <?php endif; ?>
     </div>
 
     <div class="bottom-line">

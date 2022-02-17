@@ -28,4 +28,12 @@ class DefaultController extends AppController{
     {
         $this->render('reservation');
     }
+    public function add_wallet()
+    {
+        $this->render('add_wallet');
+    }
+    public function user_details()
+    {
+        $this->render('user_details');
+    }
 }

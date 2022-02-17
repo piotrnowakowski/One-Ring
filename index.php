@@ -9,7 +9,7 @@ Routing::get('', 'DefaultController');
 Routing::post('login', 'SecurityController');
 Routing::get('marketplace', 'DefaultController');
 Routing::get('reservation', 'DefaultController');
-Routing::get('registration_form', 'DefaultController');
+Routing::post('registration_form', 'UserController');
 Routing::get('offer_post', 'DefaultController');
 Routing::get('user_details', 'DefaultController');
 Routing::post('add_wallet', 'WalletController');
