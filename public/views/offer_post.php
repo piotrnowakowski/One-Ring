@@ -9,7 +9,7 @@
     <div class="container">
 
         <div class="registration-container">
-            <form2>
+            <form2 action="offer_post" method="POST" enctype="multipart/form-data">
                 <input name="login" type="text" placeholder=" Login" required>
                 <input name="password" type="password" placeholder=" Password" required>
                 <input name="price" type="number" placeholder=" Price" required>
@@ -19,7 +19,7 @@
                 <input type="time" id="time-start" name="appt" min="00:00" max="24:00" placeholder="time-start" required>
                 <input type="time" id="time-end" name="appt" min="00:00" max="24:00" placeholder="time-end" required>
 
-                <button> ADD </button>
+                <button name="add_transaction_button" type="submit"> ADD </button>
             </form2>
         </div>
         <div class="platform-form-container">

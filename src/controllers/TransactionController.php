@@ -7,9 +7,6 @@ require_once __DIR__.'/../repository/TransactionRepository.php';
 class TransactionController extends AppController
 {
 
-    const MAX_FILE_SIZE = 1024*1024;
-    const SUPPORTED_TYPES = ['application/json'];
-    const UPLOAD_DIRECTORY = '/../public/uploads/';
     private $message = [];
     private $transactionRepository;
 
@@ -20,25 +17,21 @@ class TransactionController extends AppController
         $this->transactionRepository = new TransactionRepository();
     }
 
-    public function add_wallet()
+    public function offer_post()
     {
-        if($this->isPost() && is_uploaded_file($_FILES['json_file']['tmp_name'])
-            && $this->validate($_FILES['json_file']))
+        if($this->isPost() && $this->validate($_POST['login'], $_POST['password'], $_POST['price'],
+                $_POST['date-start'], $_POST['date-end'], $_POST['time-start'], $_POST['time-end']))
         {
-            move_uploaded_file(
-                $_FILES['json_file']['tmp_name'],
-                dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['json_file']['name']
-            );
-            $wallet = new Wallet($_POST['mnemonic_phrase'], $_POST['private-key'], $_FILES['json_file']['name']);
-            # TODO add this to a new view with user details
-            return $this->render('user_details', ['messages' => $this->message, 'wallet' => $wallet]);
+
+            $user = new User($_POST['email'], $_POST['password'], $_POST['name'], $_POST['surname'], $_POST['nick']);
+            $this->userRepository->addUser($user);
+            return $this->render('marketplace');
         }
-        return $this->render('add_wallet',['messages' => $this->message]);
+        return $this->render('registration_form',['messages' => $this->message]);
     }
 
-    private function validate(array $file): bool
+    private function validate($email, $password, $price, $date_start, $date_end, $time_start, $time_end): bool
     {
-
         return true;
     }
 }

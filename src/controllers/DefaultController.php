@@ -13,7 +13,6 @@ class DefaultController extends AppController{
     }
     public function marketplace()
     {
-        #TODO display marketplace
         $this->render('marketplace');
     }
     public function offer_post()
