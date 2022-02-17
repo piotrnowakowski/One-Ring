@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "BroshK";
+    src: url('/fonts/broshk-webfont.woff');
+}
 body{
     margin: 0;
     width: 100vw;
