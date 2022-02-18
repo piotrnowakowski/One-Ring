@@ -1,6 +1,6 @@
 .registration-container{
-    grid-row: 2/30;
-    grid-column: 22/40;
+    grid-row: 3/30;
+    grid-column: 7/34;
     align-self: center;
     margin: 2vw;
 }
@@ -8,7 +8,6 @@
     grid-row: 15/16;
     grid-column: 1/23;
     align-self: center;
-    margin: 2vw;
 }
 label{
     color: #FFFFFF;

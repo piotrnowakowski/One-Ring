@@ -36,7 +36,7 @@ section>reservation-container{
 section>div{
     display: table-cell;
     object-fit: cover;
-    height: 100%;
+    height: 90%;
 }
 .lista-informacji{
     color: #FFFFFF;
@@ -59,8 +59,4 @@ section>div{
 .lista-informacji>p,.lista-informacji>h1{
     margin:0;
     padding: 0;
-}
-.lista-informacji::-webkit-any{
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
 }

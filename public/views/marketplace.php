@@ -2,66 +2,24 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <link rel="stylesheet" type="text/css" href="public/css/reservation.css">
+    <link rel="stylesheet" type="text/css" href="public/css/reservation.css?v=<?php echo time(); ?>">
 
     <title>registration</title>
 </head>
 <body>
     <div class="container">
         <section class="reservation-container">
+        <?php foreach ($transactions as $transaction): ?>
             <div id="reservation-1">
                 <div class = "lista-informacji">
-                    <h1>Netflix</h1>
-                    <p>Price<br>a</p>
-                    <p>Start time<br> a</p>
-                    <p>End time<br> a</p>
+                    <h1><?= $transaction->getStreamingSite()?></h1>
+                    <p>Price<br><?= $transaction->getPrice()?></p>
+                    <p>Start time<br><?= $transaction->getTimeStart()?></p>
+                    <p>End time<br> <?= $transaction->getTimeEnd()?></p>
                     <button>Buy</button>
                 </div>
             </div>
-            <div id="reservation-2">
-                <div class = "lista-informacji">
-                    <h1>Netflix</h1>
-                    <p>Price<br>a</p>
-                    <p>Start time<br> a</p>
-                    <p>End time<br> a</p>
-                    <button>Buy</button>
-                </div>
-            </div>
-            <div id="reservation-3">
-                <div class = "lista-informacji">
-                    <h1>Netflix</h1>
-                    <p>Price<br>a</p>
-                    <p>Start time<br> a</p>
-                    <p>End time<br> a</p>
-                    <button>Buy</button>
-                </div>
-            </div>
-            <div id="reservation-4">
-                <div class = "lista-informacji">
-                    <h1>Netflix</h1>
-                    <p>Price<br>a</p>
-                    <p>Start time<br> a</p>
-                    <p>End time<br> a</p>
-                    <button>Buy</button>
-                </div>
-            </div>
-            <div id="reservation-5">
-                <div class = "lista-informacji">
-                    <h1>Netflix</h1>
-                    <p>Price<br>a</p>
-                    <p>Start time<br> a</p>
-                    <p>End time<br> a</p>
-                    <button>Buy</button>
-                </div>
-            </div>
-            <div id="reservation-6">
-                <div class = "lista-informacji">
-                    <h1>Netflix</h1>
-                    <p>Price<br>a</p>
-                    <p>Start time<br> a</p>
-                    <p>End time<br> a</p>
-                    <button>Buy</button>
-                </div>
+        <?php endforeach; ?>
         </section>
         
         <div class="bottom-line">

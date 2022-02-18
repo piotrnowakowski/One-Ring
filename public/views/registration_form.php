@@ -35,8 +35,6 @@
             <div class="writing">
                 <p style="margin: unset">© One Ring</p>
             </div>
-
-
             <div class="pictures">
                 <img src="public/img/facebook.svg" width="25vw" height="25vw">
                 <img src="public/img/instagram.svg" width="25vw" height="25vw">

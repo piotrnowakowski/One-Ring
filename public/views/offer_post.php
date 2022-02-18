@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <link rel="stylesheet" type="text/css" href="public/css/offer_post.css">
+    <link rel="stylesheet" type="text/css" href="public/css/offer_post.css?v=<?php echo time(); ?>">
 
     <title>registration</title>
 </head>
@@ -9,31 +9,31 @@
     <div class="container">
 
         <div class="registration-container">
-            <form2 action="offer_post" method="POST" enctype="multipart/form-data">
+            <header>
+                <div class="messages" >
+                    <?php if(isset($messages))
+                    {
+                        foreach($messages as $message)
+                            echo $message;
+                    }
+                    ?>
+                </div>
+            </header>
+            <form action="offer_post" method="POST" enctype="multipart/form-data">
                 <input name="login" type="text" placeholder=" Login" required>
                 <input name="password" type="password" placeholder=" Password" required>
                 <input name="price" type="number" placeholder=" Price" required>
                 <input name="date-start" type="date" placeholder=" Start date" required>
+                <input type="time" name="time-start" min="00:00" max="24:00" placeholder="time-start" required>
                 <input name="date-end" type="date" placeholder=" End date" required>
-
-                <input type="time" id="time-start" name="appt" min="00:00" max="24:00" placeholder="time-start" required>
-                <input type="time" id="time-end" name="appt" min="00:00" max="24:00" placeholder="time-end" required>
-
-                <button name="add_transaction_button" type="submit"> ADD </button>
-            </form2>
-        </div>
-        <div class="platform-form-container">
-            <form>
+                <input type="time" name="time-end" min="00:00" max="24:00" placeholder="time-end" required>
                 <input type="checkbox" id="Netflix" name="1" value="Netflix">
                 <label for="1"> Netflix </label>
                 <input type="checkbox" id="HBO GO" name="2" value="HBO GO">
                 <label for="2"> HBO GO </label>
-                <input type="checkbox" id="Hulu" name="3" value="Hulu">
-                <label for="3"> Hulu </label>
-                <input type="checkbox" id="Disney Plus" name="4" value="Disney Plus">
-                <label for="4"> Disney Plus </label>
-                <input type="checkbox" id="Amazon Prime" name="5" value="Amazon Prime">
-                <label for="5"> Amazon Prime </label>
+                <input type="checkbox" id="Amazon Prime" name="3" value="Amazon Prime">
+                <label for="3"> Amazon Prime </label>
+                <button name="add_transaction_button" type="submit"> ADD </button>
             </form>
         </div>
         <div class="bottom-line">

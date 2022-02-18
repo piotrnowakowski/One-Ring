@@ -3,17 +3,12 @@ require_once 'AppController.php';
 class DefaultController extends AppController{
     public function login()
     {
-        #TODO display login.html;
         $this->render('login');
     }
     public function index()
     {
         #TODO display login.html;
         $this->render('login');
-    }
-    public function marketplace()
-    {
-        $this->render('marketplace');
     }
     public function offer_post()
     {
@@ -34,5 +29,9 @@ class DefaultController extends AppController{
     public function user_details()
     {
         $this->render('user_details');
+    }
+    public function marketplace()
+    {
+        $this->render('marketplace');
     }
 }

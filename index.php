@@ -7,10 +7,10 @@ $path = parse_url($path, PHP_URL_PATH);
 
 Routing::get('', 'DefaultController');
 Routing::post('login', 'SecurityController');
-Routing::get('marketplace', 'DefaultController');
+Routing::post('marketplace', 'MarketplaceController');
 Routing::get('reservation', 'DefaultController');
 Routing::post('registration_form', 'UserController');
-Routing::get('offer_post', 'TransactionController');
+Routing::post('offer_post', 'TransactionController');
 Routing::get('user_details', 'DefaultController');
 Routing::post('add_wallet', 'WalletController');
 

@@ -19,18 +19,22 @@ class TransactionController extends AppController
 
     public function offer_post()
     {
-        if($this->isPost() && $this->validate($_POST['login'], $_POST['password'], $_POST['price'],
-                $_POST['date-start'], $_POST['date-end'], $_POST['time-start'], $_POST['time-end']))
+        if($this->isPost() && $this->validate())
         {
-
-            $user = new User($_POST['email'], $_POST['password'], $_POST['name'], $_POST['surname'], $_POST['nick']);
-            $this->userRepository->addUser($user);
+            $user_id = 1;
+            //return $this->render('offer_post',['messages' => [$user_id, $_POST['login'], $_POST['password'],
+             //   $_POST['price']                            ]]);
+            $timestamp_start = date('Y-m-d H:i:s', mktime( $_POST['date-start'],$_POST['time-start']));
+            $timestamp_end = date('Y-m-d H:i:s', mktime($_POST['date-end'], $_POST['time-end']));
+            $transaction = new Transaction($user_id, $user_id, $_POST['price'], $_POST['login'], $_POST['password'],
+                $timestamp_start, $timestamp_end);
+            $this->transactionRepository->addTransaction($transaction);
             return $this->render('marketplace');
         }
-        return $this->render('registration_form',['messages' => $this->message]);
+        return $this->render('offer_post',['messages' => $this->message]);
     }
 
-    private function validate($email, $password, $price, $date_start, $date_end, $time_start, $time_end): bool
+    private function validate(): bool
     {
         return true;
     }

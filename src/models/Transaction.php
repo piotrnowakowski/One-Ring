@@ -10,9 +10,12 @@ class Transaction
     private $price;
     private $email;
     private $password;
-    private $time;
+    private $time_start;
+    private $time_end;
 
-    public function __construct($userid, $id, $price, $email, $password, $time,
+
+
+    public function __construct($userid, $id, $price, $email, $password, $time_start,$time_end,
                                 $streaming_type=1, $streaming_site='Netflix')
     {
         $this->userid = $userid;
@@ -22,9 +25,18 @@ class Transaction
         $this->price = $price;
         $this->email = $email;
         $this->password = $password;
-        $this->time = $time;
+        $this->time_start = $time_start;
+        $this->time_end =$time_end;
+    }
+    public function getTimeEnd()
+    {
+        return $this->time_end;
     }
 
+    public function setTimeEnd($time_end): void
+    {
+        $this->time_end = $time_end;
+    }
 
     public function getUserid()
     {
@@ -96,14 +108,14 @@ class Transaction
         $this->password = $password;
     }
 
-    public function getTime()
+    public function getTimeStart()
     {
-        return $this->time;
+        return $this->time_start;
     }
 
-    public function setTime($time): void
+    public function setTimeStart($time_start): void
     {
-        $this->time = $time;
+        $this->time_start = $time_start;
     }
 
 }
