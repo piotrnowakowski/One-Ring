@@ -4,6 +4,7 @@
 * [General info](#general-info)
 * [Main functionalities](#main-functionalities)
 * [Technologies](#technologies)
+* [ERD Diagram](#ERD-diagram)
 * [Setup](#setup)
 
 ## General info
@@ -25,6 +26,9 @@
 * HTML 
 * CSS
 * PostgreSQL
+
+## ERD Diagram
+![](public/img/Untitled%20Diagram.drawio.png)
 
 ## Setup
 Run `docker-compose build` and then `docker-compose up`<br>
